@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+
+<li>
+    {% for user in users %}
+    <tr>
+        {{user.name}} : {{user.role.name}}
+        <br>
+    </tr>
+    {%endfor%}
+</li>

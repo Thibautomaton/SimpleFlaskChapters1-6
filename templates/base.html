@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+{% extends "bootstrap/base.html" %}
+
+{% block title %}Application{% endblock %}
+
+{% block navbar %} {% endblock %}
+
+{% block content%}
+<div class="container">
+    {% for message in get_flashed_messages() %}
+    <div class="alert alert-warning">
+        <button type="button" class="close">&times;</button>
+        {{message}}
+    </div>
+    {% endfor %}
+    {% block page_content %}{% endblock %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+{{ moment.include_moment()}}
+{% endblock %}
+
+
+

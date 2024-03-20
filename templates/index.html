@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block page_content %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{{wtf.quick_form(form)}}
+<br>
+<br>
+The user is known : {{known}}
+<br>
+Go to <a href="{{url_for('users')}}">users</a>
+{% endblock %}
